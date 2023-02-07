@@ -1,5 +1,7 @@
 # exemplars-storage
 
+Storing Prometheus exemplars using different storage systems.
+
 ## Supported Features
 
 - Prometheus Remote Write Receiver to ingest exemplars
@@ -19,4 +21,14 @@ TODO:
 ```bash
 go build -o main main.go
 ./main
+```
+
+### Prometheus Setup
+
+Add following section to your Prometheus config file to send exemplars to the server.
+
+```yaml
+remote_write:
+  - url: http://localhost:8081/api/v1/write
+    send_exemplars: true
 ```
