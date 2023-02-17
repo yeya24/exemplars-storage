@@ -310,8 +310,8 @@ github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINE
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 h1:Jamvg5psRIccs7FGNTlIRMkT8wgtp5eCXdBlqhYGL6U=
 github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
-github.com/polarsignals/frostdb v0.0.0-20230206210506-aca9ebd33fa4 h1:AaQMIwUfYN5onTKlOtuSDeO+TjtI+CC8DgASuUPkApQ=
-github.com/polarsignals/frostdb v0.0.0-20230206210506-aca9ebd33fa4/go.mod h1:oSMHRTUeU8d3r0OfXGdOR3d8bEPHQfbqfB3EvFwEXLQ=
+github.com/polarsignals/frostdb v0.0.0-20230216140258-1367c80ff708 h1:h2KJ8LJ0rqr+yMTIiXfJ+/lOz46kv0+z4ZiT9+zu8C0=
+github.com/polarsignals/frostdb v0.0.0-20230216140258-1367c80ff708/go.mod h1:B+AUEvAOVZkav7fI7YTgtzTKHi8M0jRzZrj0pLPZJ2A=
 github.com/prometheus/client_golang v0.9.1/go.mod h1:7SWBe2y4D6OKWSNQJUaRYU/AaXPKyh/dDVn+NZz0KFw=
 github.com/prometheus/client_golang v1.0.0/go.mod h1:db9x61etRT2tGnBNRi70OPL5FsnadC4Ky3P0J6CfImo=
 github.com/prometheus/client_golang v1.7.1/go.mod h1:PY5Wy2awLA44sXw4AOSfFBetzPP4j5+D6mVACh+pe2M=
@@ -348,8 +348,8 @@ github.com/scaleway/scaleway-sdk-go v1.0.0-beta.12 h1:Aaz4T7dZp7cB2cv7D/tGtRdSMh
 github.com/segmentio/asm v1.1.3/go.mod h1:Ld3L4ZXGNcSLRg4JBsZ3//1+f/TjYl0Mzen/DQy1EJg=
 github.com/segmentio/encoding v0.3.5 h1:UZEiaZ55nlXGDL92scoVuw00RmiRCazIEmvPSbSvt8Y=
 github.com/segmentio/encoding v0.3.5/go.mod h1:n0JeuIqEQrQoPDGsjo8UNd1iA0U8d8+oHAA4E3G3OxM=
-github.com/segmentio/parquet-go v0.0.0-20221209161419-3f277a904e0e h1:oB6VqjFrx6HC1G736iZIe3xII1Zj/QCWInKdUw98AtU=
-github.com/segmentio/parquet-go v0.0.0-20221209161419-3f277a904e0e/go.mod h1:SclLlCfB7c7CH0YerV+OtYmZExyK5rhVOd6UT90erVw=
+github.com/segmentio/parquet-go v0.0.0-20230209224803-1d85e8136681 h1:wjC8jWN4Kt/Per2HczpJzs5xSS0SYBaFa6O9Bc4SkQ8=
+github.com/segmentio/parquet-go v0.0.0-20230209224803-1d85e8136681/go.mod h1:SclLlCfB7c7CH0YerV+OtYmZExyK5rhVOd6UT90erVw=
 github.com/sirupsen/logrus v1.2.0/go.mod h1:LxeOpSwHxABJmUn/MG1IvRgCAasNZTLOkJPxbbu5VWo=
 github.com/sirupsen/logrus v1.4.2/go.mod h1:tLMulIdttU9McNUspp0xgXVQah82FyeX6MwdIuYE2rE=
 github.com/sirupsen/logrus v1.6.0/go.mod h1:7uNnSEd1DgxDLC74fIahvMZmmYsHGZGEOFrfsX/uA88=

@@ -4,13 +4,16 @@ go 1.19
 
 require (
 	github.com/apache/arrow/go/v10 v10.0.1
+	github.com/go-chi/chi/v5 v5.0.8
+	github.com/go-chi/render v1.0.2
 	github.com/go-kit/log v0.2.1
 	github.com/gogo/protobuf v1.3.2
 	github.com/klauspost/compress v1.15.9
-	github.com/polarsignals/frostdb v0.0.0-20230206210506-aca9ebd33fa4
+	github.com/pkg/errors v0.9.1
+	github.com/polarsignals/frostdb v0.0.0-20230216140258-1367c80ff708
 	github.com/prometheus/client_golang v1.14.0
 	github.com/prometheus/prometheus v0.42.0
-	github.com/segmentio/parquet-go v0.0.0-20221209161419-3f277a904e0e
+	github.com/segmentio/parquet-go v0.0.0-20230209224803-1d85e8136681
 	github.com/thanos-io/thanos v0.30.2
 	go.opentelemetry.io/otel/trace v1.11.2
 	google.golang.org/grpc v1.52.1
@@ -32,8 +35,6 @@ require (
 	github.com/dustin/go-humanize v1.0.0 // indirect
 	github.com/edsrzf/mmap-go v1.1.0 // indirect
 	github.com/efficientgo/core v1.0.0-rc.0.0.20221201130417-ba593f67d2a4 // indirect
-	github.com/go-chi/chi/v5 v5.0.8 // indirect
-	github.com/go-chi/render v1.0.2 // indirect
 	github.com/go-logfmt/logfmt v0.5.1 // indirect
 	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
@@ -58,7 +59,6 @@ require (
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/opentracing/opentracing-go v1.2.0 // indirect
 	github.com/pierrec/lz4/v4 v4.1.15 // indirect
-	github.com/pkg/errors v0.9.1 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/prometheus/client_model v0.3.0 // indirect
 	github.com/prometheus/common v0.39.0 // indirect
