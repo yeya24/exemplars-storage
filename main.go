@@ -19,7 +19,6 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/collectors"
 	"github.com/thanos-io/thanos/pkg/exemplars"
-	"github.com/thanos-io/thanos/pkg/extprom"
 	"github.com/thanos-io/thanos/pkg/info"
 	"github.com/thanos-io/thanos/pkg/prober"
 	grpcserver "github.com/thanos-io/thanos/pkg/server/grpc"
@@ -65,7 +64,7 @@ func main() {
 	statusProber := prober.Combine(
 		httpProbe,
 		grpcProbe,
-		prober.NewInstrumentation(comp, logger, extprom.WrapRegistererWithPrefix("thanos_", reg)),
+		prober.NewInstrumentation(comp, logger, reg),
 	)
 
 	srv := httpserver.New(logger, reg, comp, httpProbe,
