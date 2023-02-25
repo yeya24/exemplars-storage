@@ -3,7 +3,6 @@ package server
 import (
 	"context"
 	"net/http"
-	"time"
 
 	"github.com/go-chi/chi/v5"
 	"github.com/go-kit/log"
@@ -24,33 +23,24 @@ type ExemplarServer struct {
 
 	logger log.Logger
 	reg    *prometheus.Registry
+	Mux    *chi.Mux
 }
 
 func NewExemplarServer(logger log.Logger, reg *prometheus.Registry, store storage.ExemplarStore) *ExemplarServer {
-	return &ExemplarServer{
+	es := &ExemplarServer{
 		store:  store,
 		logger: logger,
 		reg:    reg,
 	}
-}
-
-func (e *ExemplarServer) ListenAndServe(addr string) error {
 	mux := chi.NewRouter()
 	mux.HandleFunc("/metrics", func(w http.ResponseWriter, r *http.Request) {
-		promhttp.HandlerFor(e.reg, promhttp.HandlerOpts{EnableOpenMetrics: true}).ServeHTTP(w, r)
+		promhttp.HandlerFor(reg, promhttp.HandlerOpts{EnableOpenMetrics: true}).ServeHTTP(w, r)
 	})
-	mux.Post("/api/v1/write", e.RemoteWrite)
-	mux.Post("/api/v1/query_exemplars", e.QueryExemplars)
-	mux.Get("/api/v1/query_exemplars", e.QueryExemplars)
-
-	server := http.Server{
-		Addr:         addr,
-		Handler:      mux,
-		ReadTimeout:  5 * time.Second, // TODO make config option
-		WriteTimeout: time.Minute,     // TODO make config option
-	}
-
-	return server.ListenAndServe()
+	mux.Post("/api/v1/write", es.RemoteWrite)
+	mux.Post("/api/v1/query_exemplars", es.QueryExemplars)
+	mux.Get("/api/v1/query_exemplars", es.QueryExemplars)
+	es.Mux = mux
+	return es
 }
 
 func (e *ExemplarServer) Exemplars(r *exemplarspb.ExemplarsRequest, s exemplarspb.Exemplars_ExemplarsServer) error {
